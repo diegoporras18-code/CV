@@ -53,7 +53,6 @@ main,.top,footer{position:relative;z-index:1}
 .top nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
 .btn{display:inline-flex;align-items:center;gap:8px;font:500 14px var(--body);padding:10px 16px;border-radius:999px;text-decoration:none;border:1px solid var(--edge);color:var(--text);background:rgba(15,33,72,.5);backdrop-filter:blur(6px);transition:border-color .2s,background .2s}
 .btn:hover{border-color:var(--blue);background:rgba(77,124,255,.12)}
-.btn{cursor:pointer}
 .btn-solid{background:var(--text);color:var(--bg);border-color:var(--text)}
 .btn-solid:hover{background:#fff;border-color:#fff}
 
@@ -270,7 +269,7 @@ footer{padding:24px 0 40px;color:#5f7099;font-size:13px}
 <header class="top wrap">
   <a class="mark" href="#">Diego Porras</a>
   <nav aria-label="Descargas">
-    <button type="button" class="btn btn-solid" data-print>Descargar CV (PDF)</button>
+    <a class="btn btn-solid" href="Diego_Porras_CV_Ejecutivo.pdf" download="Diego_Porras_CV_Ejecutivo.pdf" type="application/pdf">Descargar CV (PDF)</a>
   </nav>
 </header>
 
@@ -488,7 +487,7 @@ footer{padding:24px 0 40px;color:#5f7099;font-size:13px}
     <span class="loc">Bogotá, Colombia</span>
     <a class="btn" href="tel:+573203940290">+57 320 394 0290</a>
     <a class="btn wa" href="https://wa.me/573203940290" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.08c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.83s.7-2 .96-2.28c.25-.27.55-.34.73-.34l.53.01c.17.01.4-.06.62.48.24.56.8 1.94.87 2.08.07.14.12.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.8.86-1.07.18-.27.36-.23.61-.14.25.09 1.6.75 1.87.89.27.14.46.2.52.32.07.11.07.66-.17 1.33Z"/></svg>WhatsApp</a>
-    <button type="button" class="btn btn-solid" data-print>Descargar CV (PDF)</button>
+    <a class="btn btn-solid" href="Diego_Porras_CV_Ejecutivo.pdf" download="Diego_Porras_CV_Ejecutivo.pdf" type="application/pdf">Descargar CV (PDF)</a>
   </div>
 </section>
 </main>
@@ -496,10 +495,6 @@ footer{padding:24px 0 40px;color:#5f7099;font-size:13px}
 <footer class="wrap">Diego Porras · Data, Analytics e Innovación</footer>
 
 <script>
-document.querySelectorAll('[data-print]').forEach(b => b.addEventListener('click', () => {
-  const t = document.title; document.title = 'Diego_Porras_CV_Ejecutivo';
-  window.print(); setTimeout(() => { document.title = t; }, 500);
-}));
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
